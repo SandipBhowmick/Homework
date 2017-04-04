@@ -1,7 +1,7 @@
 class CitiesController < ApplicationController
   
   def index
-    @cities = City.all
+    @cities = City.all.order('city_name ASC')
   end
   
   def new
@@ -33,6 +33,6 @@ class CitiesController < ApplicationController
     end
 
     def city_params
-      params.require(:city).permit(:city_id,:city_name)
+      params.require(:city).permit(:city_name)
     end
 end

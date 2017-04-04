@@ -23,7 +23,16 @@
     <%= f.label :quality_score %><br>
     <%= f.text_field :quality_score %>
   </div>
+  <div class="field">
+    <%= f.collection_check_boxes :venue_ids, City.all, :id, :city_name, checked: City.all.map(&:id) do |b| %>
+  <span>
+    <%= b.check_box %>
+    <%= b.label %>
+  </span>
+<% end %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
