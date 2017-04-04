@@ -1,0 +1,12 @@
+<h2> City Index Page </h2>
+<div> <%= link_to("Add a new city",new_city_path)%></div>
+<div>
+<table>
+	<tr><th> City Name </th>
+	</tr>
+	<% @cities.each do |t| %>
+	<tr><td><%=t.city_name %> </td><td> <%= link_to("Delet",t, method: :delete, data: { confirm: 'Are you sure?' }  )%>
+	</td></tr>
+	<% end %>
+</table>
+</div>

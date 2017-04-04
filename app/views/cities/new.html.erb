@@ -1,0 +1,16 @@
+<h2> Add a new City </h2>
+<div> 
+	<%= form_for(:city, :url => @city) do |f| %>
+	<table>
+		<tr>
+			<th><%= f.label(:city_name, "City Name")%></th>
+			<td><%= f.text_field(:city_name, :id=>"city-name")%></td>
+		</tr>
+	
+		<tr><td><%= submit_tag("Save City") %></td></tr>
+		<% end %>
+
+	</table>
+</dev>
+<div> <%= link_to("Back",cities_path)%></div>
+	
