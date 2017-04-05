@@ -24,6 +24,7 @@ class CustomersController < ApplicationController
   # POST /customers
   # POST /customers.json
   def create
+    #@cities = City.order('city_name asc').all
     @customer = Customer.new(customer_params)
 
     respond_to do |format|
